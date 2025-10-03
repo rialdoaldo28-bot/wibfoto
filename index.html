@@ -1,0 +1,85 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untuk Kamu ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+      
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+        <!-- panggil file script.js -->
+        <script src"script.js"></script>
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      background: #ff4d6d;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      background: #ff1e56;
+      transform: scale(1.1);
+    }
+
+    /* Animasi love */
+    .heart {
+      position: absolute;
+      color: rgba(255,255,255,0.6);
+      font-size: 20px;
+      animation: floatUp 5s linear infinite;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(100vh); opacity: 1; }
+      to { transform: translateY(-10vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hai Sayangku 💕</h1>
+  <p>Aku bikin website ini khusus buat kamu.  
+     Semoga kamu selalu ingat kalau aku sayang banget sama kamu 😘</p>
+  <a href="galeri.html">Lihat Galeri Kita</a>
+
+  <!-- script love jatuh -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "❤";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = Math.random() * 20 + 15 + "px";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+    setInterval(createHeart, 500);
+  </script>
+</body>
+</html>

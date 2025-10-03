@@ -1,0 +1,11 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* maksimal 3 gambar per baris */
+  gap: 20px;
+  justify-items: center;
+}
+
+.gallery img {
+  width: 200px;
+  border-radius: 15px;
+}
